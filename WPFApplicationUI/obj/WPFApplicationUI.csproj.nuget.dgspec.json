@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\WarehouseManagementApp\\WPFApplicationUI\\WPFApplicationUI.csproj": {}
+    "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\Phần mềm quản lý kho\\WPFApplicationUI\\WPFApplicationUI.csproj": {}
   },
   "projects": {
-    "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\WarehouseManagementApp\\WPFApplicationUI\\WPFApplicationUI.csproj": {
+    "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\Phần mềm quản lý kho\\WPFApplicationUI\\WPFApplicationUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\WarehouseManagementApp\\WPFApplicationUI\\WPFApplicationUI.csproj",
+        "projectUniqueName": "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\Phần mềm quản lý kho\\WPFApplicationUI\\WPFApplicationUI.csproj",
         "projectName": "WPFApplicationUI",
-        "projectPath": "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\WarehouseManagementApp\\WPFApplicationUI\\WPFApplicationUI.csproj",
+        "projectPath": "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\Phần mềm quản lý kho\\WPFApplicationUI\\WPFApplicationUI.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\WarehouseManagementApp\\WPFApplicationUI\\obj\\",
+        "outputPath": "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\Phần mềm quản lý kho\\WPFApplicationUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Os8m+IjVoodTq6jG4gu0Qlm2O5h0gUcxCcd6gpJylj7FsCxwK/zcytfWAee43BLz+m2EA9TGiz6kiQ02Z5Rsg==",
+  "dgSpecHash": "WuZnRF0Vmv3+setkX6F8/Z1ZCNMUklIsB6v86LEZZoWK1tNdkSqyrf8N7bxH5i7AKcnWy9CoMV93OSd4ToQkXQ==",
   "success": true,
-  "projectFilePath": "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\WarehouseManagementApp\\WPFApplicationUI\\WPFApplicationUI.csproj",
+  "projectFilePath": "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\Phần mềm quản lý kho\\WPFApplicationUI\\WPFApplicationUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\controlzex\\4.3.0\\controlzex.4.3.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\mahapps.metro\\2.0.0\\mahapps.metro.2.0.0.nupkg.sha512",
