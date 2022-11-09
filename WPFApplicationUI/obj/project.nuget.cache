@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "6Os8m+IjVoodTq6jG4gu0Qlm2O5h0gUcxCcd6gpJylj7FsCxwK/zcytfWAee43BLz+m2EA9TGiz6kiQ02Z5Rsg==",
+  "success": true,
+  "projectFilePath": "D:\\KIẾN THỨC\\1. CÔNG NGHỆ\\0. LẬP TRÌNH\\CSharp\\CSharp MasterCoure\\8. WPF Core\\8.2 WPF Project\\WarehouseManagementApp\\WPFApplicationUI\\WPFApplicationUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\controlzex\\4.3.0\\controlzex.4.3.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\mahapps.metro\\2.0.0\\mahapps.metro.2.0.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\materialdesigncolors\\2.0.9\\materialdesigncolors.2.0.9.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\materialdesignthemes\\4.6.1\\materialdesignthemes.4.6.1.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\materialdesignthemes.mahapps\\0.2.5\\materialdesignthemes.mahapps.0.2.5.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}
