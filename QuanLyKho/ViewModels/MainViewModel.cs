@@ -10,10 +10,17 @@ namespace QuanLyKho.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
+        public bool IsLoaded { get; set; }
         // mọi thứ xử lý sẽ nằm ở đây
         public MainViewModel()
         {
-            MessageBox.Show("Da vao trong cuar MainViewModel");
+            if(!IsLoaded)
+            {
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.ShowDialog();
+                IsLoaded = true;
+            }
+            
         }
     }
 }
