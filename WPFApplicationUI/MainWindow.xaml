@@ -16,8 +16,6 @@
         FontFamily="{DynamicResource MaterialDesignFont}">
     
     <Grid>
-        <materialDesign:Card>
-            <TextBlock Text="Dung Dep Trai"></TextBlock>
-        </materialDesign:Card>
+
     </Grid>
 </Window>

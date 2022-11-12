@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFApplicationUI", "WPFApplicationUI\WPFApplicationUI.csproj", "{D802C85F-F928-459C-A544-522BF233AD3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyKho", "QuanLyKho\QuanLyKho.csproj", "{08096B46-3122-4F7A-BED7-050EA8B245AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D802C85F-F928-459C-A544-522BF233AD3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D802C85F-F928-459C-A544-522BF233AD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D802C85F-F928-459C-A544-522BF233AD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D802C85F-F928-459C-A544-522BF233AD3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08096B46-3122-4F7A-BED7-050EA8B245AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08096B46-3122-4F7A-BED7-050EA8B245AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08096B46-3122-4F7A-BED7-050EA8B245AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08096B46-3122-4F7A-BED7-050EA8B245AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
