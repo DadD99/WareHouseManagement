@@ -58,11 +58,10 @@
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                     </Grid>
                     <Grid Grid.Row="1">
-                        <TextBox
-                        Width="280"
-                        VerticalAlignment="Center"
-                        materialDesign:HintAssist.Hint="Password"
-                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        <PasswordBox
+                            x:Name="FloatingPasswordBox"
+                            materialDesign:HintAssist.Hint="Password"
+                            Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
@@ -76,7 +75,7 @@
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                         Style="{StaticResource MaterialDesignRaisedButton}"
                         ToolTip="Resource name: MaterialDesignRaisedButton" />
-                        <Button 
+                        <Button                      
                         Grid.Column="1"
                         Width="100"
                         Content="CANCEL"
