@@ -5,7 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuanLyKho"
         mc:Ignorable="d"
-        Title="MainWindow" Height="359" Width="638"
+        Title="Warhouse Management Application" Height="359" Width="638"
+        
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        
+        xmlns:uc="clr-namespace:QuanLyKho.UserControlDung"       
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -13,14 +17,43 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}"
+        FontFamily="{DynamicResource MaterialDesignFont}"      
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        
+        Name="mainWindow"
+        WindowStartupLocation="CenterScreen"
         DataContext="{StaticResource MainVM}">
-    <Grid>
-        <StackPanel>
-            <materialDesign:Card Padding="32" Margin="16">
-                <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">My First Material Design App</TextBlock>
-            </materialDesign:Card>
-        </StackPanel>
 
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction 
+                Command="{Binding LoadedWindowCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <uc:ControlBarUC Tag="{Binding Title, ElementName=mainWindow}"></uc:ControlBarUC>
+        </Grid>
+        <Grid Grid.Row="1">
+
+        </Grid>
     </Grid>
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <uc:ControlBarUC></uc:ControlBarUC>
+        </Grid>
+        <Grid Grid.Row="1">
+
+        </Grid>
+    </Grid>-->
 </Window>
