@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuanLyKho"
         mc:Ignorable="d"
-        Title="Warhouse Management Application" Height="431" Width="638"
+        Title="Warhouse Management Application" Height="431" Width="660"
         
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         
@@ -31,7 +31,7 @@
                 Command="{Binding LoadedWindowCommand}"/>
         </i:EventTrigger>
     </i:Interaction.Triggers>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -49,7 +49,7 @@
             <!--menu-->
             <Grid Grid.Row="0"
                   Margin="2">
-                
+
                 <Grid HorizontalAlignment="Stretch"
                       VerticalAlignment="Stretch"
                       Background="#F1E6F6">
@@ -71,8 +71,9 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    
+
                     <Button ToolTip="Nhập kho"
                             materialDesign:ButtonAssist.CornerRadius="5"                         
                             Grid.Column="0">
@@ -132,7 +133,7 @@
 
                             <Grid Grid.Row="0">
                                 <TextBlock
-                                    Text="Hàng Tồn Kho"
+                                    Text="Tồn Kho"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"></TextBlock>
                             </Grid>
@@ -217,14 +218,39 @@
                             </Grid>
                         </Grid>
                     </Button>
+                    <Button ToolTip="Người dùng"
+                            materialDesign:ButtonAssist.CornerRadius="5"
+                            Grid.Column="6">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <TextBlock
+                                    Text="Người Dùng"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <materialDesign:PackIcon 
+                                    Kind="User"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"></materialDesign:PackIcon>
+                            </Grid>
+                        </Grid>
+                    </Button>
+
 
                 </Grid>
             </Grid>
-            
-            
+
+
             <!--main-->
             <Grid Grid.Row ="1"
-                  Background="#F1E6F6">
+                  Background="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -239,7 +265,7 @@
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0"
-                                  Margin="4 0 4 4">
+                                  Margin="4 4 4 4">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
@@ -270,7 +296,7 @@
                                         ToolTip="Resource name: MaterialDesignRaisedButton" />
                                 </Grid>
                             </Grid>
-                            
+
                             <Grid Grid.Row="1"
                                   Margin="4">
                                 <Separator></Separator>
@@ -282,7 +308,7 @@
                                         <Setter Property="Width" Value="200"></Setter>
                                         <Setter Property="Background" Value="#957EB1"></Setter>
                                         <Setter Property="Foreground" Value="{DynamicResource PrimaryHueDarkForegroundBrush}"></Setter>
-                                        <Setter Property="Margin" Value="4 4 4 8"></Setter>
+                                        <Setter Property="Margin" Value="2 2 2 8"></Setter>
                                     </Style>
                                 </Grid.Resources>
                                 <Grid.ColumnDefinitions>
@@ -290,7 +316,7 @@
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                
+
                                 <Grid Grid.Column="0">
                                     <materialDesign:Card>
                                         <Grid>
@@ -324,7 +350,7 @@
                                         </Grid>
                                     </materialDesign:Card>
                                 </Grid>
-                                
+
                                 <Grid Grid.Column="1">
                                     <materialDesign:Card>
                                         <Grid>
@@ -358,7 +384,7 @@
                                         </Grid>
                                     </materialDesign:Card>
                                 </Grid>
-                                
+
                                 <Grid Grid.Column="3">
                                     <materialDesign:Card>
                                         <Grid>
@@ -392,21 +418,74 @@
                                         </Grid>
                                     </materialDesign:Card>
                                 </Grid>
-                                
+
                             </Grid>
                         </Grid>
                     </materialDesign:Card>
                 </Grid>
-                
+
                 <!--List-->
-                <Grid Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-                </Grid>
+                <materialDesign:Card Grid.Row="1" VerticalAlignment="Stretch">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0"
+                                  Margin="4 4 4 4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <DatePicker
+                                        HorizontalAlignment="Left"
+                                        Width="150"
+                                        materialDesign:HintAssist.Hint="Ngày bắt đầu"
+                                        materialDesign:TextFieldAssist.HasClearButton="True"
+                                        Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <DatePicker
+                                        HorizontalAlignment="Left"
+                                        Width="150"
+                                        materialDesign:HintAssist.Hint="Ngày kết thúc"
+                                        materialDesign:TextFieldAssist.HasClearButton="True"
+                                        Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                            </Grid>
+                            <Grid Grid.Column="2">
+                                <Button
+                                        HorizontalAlignment="Right"
+                                        Width= "130"
+                                        Content="LỌC"
+                                        Style="{StaticResource MaterialDesignRaisedButton}"
+                                        ToolTip="Resource name: MaterialDesignRaisedButton" />
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Row="1"
+                              Margin="4">
+                            <Separator></Separator>
+                        </Grid>
+                        <Grid Grid.Row="2">
+                            <ListView>
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="STT"></GridViewColumn>
+                                        <GridViewColumn Header="Tên mặt hàng"></GridViewColumn>
+                                        <GridViewColumn Header="Số lượng"></GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </Grid>
+
+                    </Grid>
+                </materialDesign:Card>
+
+
             </Grid>
-            
+
 
         </Grid>
     </Grid>
