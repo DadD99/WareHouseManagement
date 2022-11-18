@@ -28,7 +28,8 @@
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction 
-                Command="{Binding LoadedWindowCommand}"/>
+                Command="{Binding LoadedWindowCommand}"
+                CommandParameter="{Binding ElementName=window}"/>
         </i:EventTrigger>
     </i:Interaction.Triggers>
 

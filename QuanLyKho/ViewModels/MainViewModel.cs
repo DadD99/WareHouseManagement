@@ -1,4 +1,5 @@
-﻿using QuanLyKho.Views;
+﻿using QuanLyKho.Models;
+using QuanLyKho.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,12 +29,25 @@ namespace QuanLyKho.ViewModels
 
         public MainViewModel()
         {
-            LoadedWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            LoadedWindowCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
             {
-                
+                IsLoaded = true;
+                if (p == null)
+                    return;
+                p.Hide();
                 LoginWindow loginWindow = new LoginWindow();
                 loginWindow.ShowDialog();
-                IsLoaded = true;
+                if (loginWindow.DataContext == null)
+                    return;
+                var loginVM = loginWindow.DataContext as LoginViewModel;
+                if(loginVM.IsLogin)
+                {
+                    p.Show();
+                }
+                else
+                {
+                    p.Close();
+                }
             });
 
             UnitCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
@@ -41,25 +55,21 @@ namespace QuanLyKho.ViewModels
                 UnitWindow wd = new UnitWindow();
                 wd.ShowDialog();              
             });
-
             SuppliersCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 SuppliersWindow wd = new SuppliersWindow();
                 wd.ShowDialog();
             });
-
             CustomersCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 CustomersWindow wd = new CustomersWindow();
                 wd.ShowDialog();
             });
-
             ObjectsCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 ObjectsWindow wd = new ObjectsWindow();
                 wd.ShowDialog();
             });
-
             UsersCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 UsersWindow wd = new UsersWindow();
@@ -75,7 +85,7 @@ namespace QuanLyKho.ViewModels
                 OutputWindow wd = new OutputWindow();
                 wd.ShowDialog();
             });
-
+            
         }
     }
 }
