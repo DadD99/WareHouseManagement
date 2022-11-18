@@ -29,8 +29,57 @@
                 <uc:ControlBarUC Tag="{Binding Title, ElementName=unitWindow}"></uc:ControlBarUC>
             </Grid>
             <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
 
-            </Grid>
+                <!--Cac element binding tu selected item-->
+            <materialDesign:Card Grid.Row="0" Margin="4">
+                <Grid>
+                    <TextBox
+                        Margin="4"
+                        VerticalAlignment="Center"
+                        materialDesign:HintAssist.Hint="Tên đơn vị đo"
+                        Text="{Binding DisplayName, UpdateSourceTrigger=PropertyChanged}"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="1" Margin="4">
+                <materialDesign:Card.Resources>
+                    <Style TargetType="Button"
+                           BasedOn="{StaticResource MaterialDesignFlatMidBgButton}">
+                        <Setter Property="Width" Value="100"></Setter>
+                        <Setter Property="Margin" Value="4"></Setter>
+                    </Style>
+                </materialDesign:Card.Resources>
+                <WrapPanel>
+                    <Button Content="Thêm"
+                            Command="{Binding AddCommand}"></Button>
+                    <Button Content="Sửa"
+                            Command="{Binding EditCommand}"></Button>
+                    <Button Content="Xóa"
+                            Command="{Binding DeleteCommand}"></Button>
+                </WrapPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="2" Margin="4" VerticalAlignment="Stretch">
+                <ScrollViewer VerticalScrollBarVisibility="Auto"
+                              HorizontalScrollBarVisibility="Auto">
+                    <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Id" DisplayMemberBinding="{Binding ID}"></GridViewColumn>
+                                <GridViewColumn Header="Tên Đơn Vị Đo" DisplayMemberBinding="{Binding Displayname}"></GridViewColumn>
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+            </materialDesign:Card>
+        </Grid>
         
     </Grid>
 </Window>

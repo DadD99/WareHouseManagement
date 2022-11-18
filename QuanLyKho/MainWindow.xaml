@@ -21,7 +21,7 @@
         ResizeMode="NoResize"
         WindowStyle="None"
         
-        Name="mainWindow"
+        Name="window"
         WindowStartupLocation="CenterScreen"
         DataContext="{StaticResource MainVM}">
 
@@ -38,7 +38,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Height="auto">
-            <uc:ControlBarUC Tag="{Binding Title, ElementName=mainWindow}"></uc:ControlBarUC>
+            <uc:ControlBarUC Tag="{Binding Title, ElementName=window}"></uc:ControlBarUC>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -76,7 +76,8 @@
 
                     <Button ToolTip="Nhập kho"
                             materialDesign:ButtonAssist.CornerRadius="5"                         
-                            Grid.Column="0">
+                            Grid.Column="0"
+                            Command="{Binding InputCommand}">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -100,7 +101,8 @@
                     </Button>
                     <Button ToolTip="Xuất kho"                       
                             materialDesign:ButtonAssist.CornerRadius="5"
-                            Grid.Column="1">
+                            Grid.Column="1"
+                            Command="{Binding OutputCommand}">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -124,7 +126,8 @@
                     </Button>
                     <Button ToolTip="Hàng Tồn Kho"
                             materialDesign:ButtonAssist.CornerRadius="5"
-                            Grid.Column="2">
+                            Grid.Column="2"
+                            Command="{Binding ObjectsCommand}">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -148,7 +151,8 @@
                     </Button>
                     <Button ToolTip="Đơn vị"
                             materialDesign:ButtonAssist.CornerRadius="5"
-                            Grid.Column="3">
+                            Grid.Column="3"
+                            Command="{Binding UnitCommand}">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -172,7 +176,8 @@
                     </Button>
                     <Button ToolTip="Nhà cung cấp"                          
                             materialDesign:ButtonAssist.CornerRadius="5"
-                            Grid.Column="4">
+                            Grid.Column="4"
+                            Command="{Binding SuppliersCommand}">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -196,7 +201,8 @@
                     </Button>
                     <Button ToolTip="Khách hàng"
                             materialDesign:ButtonAssist.CornerRadius="5"
-                            Grid.Column="5">
+                            Grid.Column="5"
+                            Command="{Binding CustomersCommand}">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -220,7 +226,8 @@
                     </Button>
                     <Button ToolTip="Người dùng"
                             materialDesign:ButtonAssist.CornerRadius="5"
-                            Grid.Column="6">
+                            Grid.Column="6"
+                            Command="{Binding UsersCommand}">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>

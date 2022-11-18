@@ -7,17 +7,41 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\CustomersWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\InputWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\LoginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControlDung\ControlBarUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ObjectsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\OutputWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SuppliersWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\UnitWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UsersWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\CustomersWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\InputWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\LoginWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -30,7 +54,19 @@
     <Page Update="UserControlDung\ControlBarUC.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\ObjectsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OutputWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SuppliersWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\UnitWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UsersWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

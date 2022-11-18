@@ -7,7 +7,7 @@
         xmlns:uc="clr-namespace:QuanLyKho.UserControlDung"
         mc:Ignorable="d"
         
-        Name="loginWindow"       
+        Name="window"       
         Title="Login Window" Height="289" Width="368"
         
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -31,7 +31,7 @@
         </Grid.RowDefinitions>
         
         <Grid Grid.Row="0">
-            <uc:ControlBarUC Tag="{Binding Title, ElementName=loginWindow}" ></uc:ControlBarUC>
+            <uc:ControlBarUC Tag="{Binding Title, ElementName=window}" ></uc:ControlBarUC>
         </Grid>
         
         <Grid Grid.Row="1">

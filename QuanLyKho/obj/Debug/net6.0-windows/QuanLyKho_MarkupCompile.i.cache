@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\KIẾN THỨC\1. CÔNG NGHỆ\0. LẬP TRÌNH\CSharp\CSharp MasterCoure\8. WPF Core\8.2 WPF Project\Phần mềm quản lý kho\QuanLyKho\App.xaml
-5-1793661868
+11-111361494
 
-1145427024
+17-657508848
 202-1394809940
-MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControlDung\ControlBarUC.xaml;Views\LoginWindow.xaml;Views\UnitWindow.xaml;
+MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControlDung\ControlBarUC.xaml;Views\CustomersWindow.xaml;Views\InputWindow.xaml;Views\LoginWindow.xaml;Views\ObjectsWindow.xaml;Views\OutputWindow.xaml;Views\SuppliersWindow.xaml;Views\UnitWindow.xaml;Views\UsersWindow.xaml;
 
 True
 
