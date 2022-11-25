@@ -2,6 +2,7 @@
 using QuanLyKho.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace QuanLyKho.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
+        private ObservableCollection<Inventories> _inventoriesList;
+        public ObservableCollection<Inventories> InventoriesList { get => _inventoriesList; set { _inventoriesList = value; OnPropertyChanged(); } }
         public bool IsLoaded { get; set; }
         // mọi thứ xử lý sẽ nằm ở đây
         public ICommand LoadedWindowCommand { get; set; }
@@ -43,6 +46,7 @@ namespace QuanLyKho.ViewModels
                 if(loginVM.IsLogin)
                 {
                     p.Show();
+                    LoadInventoryData();
                 }
                 else
                 {
@@ -86,6 +90,42 @@ namespace QuanLyKho.ViewModels
                 wd.ShowDialog();
             });
             
+        }
+        void LoadInventoryData()
+        {
+            InventoriesList = new ObservableCollection<Inventories>();
+            var objectList = DataProvider.Ins.DB.Objects;
+            int i = 1;
+            foreach (var item in objectList)
+            {
+                
+                var inputList = DataProvider.Ins.DB.InputInfos.Where(p=>p.IdObject == item.Id);
+                var outputList = DataProvider.Ins.DB.OutputInfos.Where(p => p.IdObject == item.Id);
+                
+                int? sumInput = 0;
+                if (inputList != null)
+                {
+                    sumInput = inputList.Sum(p => p.Count);
+                }
+
+                int? sumOutput = 0;
+                if (outputList != null)
+                {
+                    sumOutput = outputList.Sum(p => p.Count);
+                }
+
+
+                Inventories inventory = new Inventories();
+                inventory.STT = i;
+                inventory.Count = sumInput - sumOutput;
+                inventory.Object = item;
+                InventoriesList.Add(inventory);
+
+                i++;
+               
+            }
+
+
         }
     }
 }

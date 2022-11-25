@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuanLyKho"
         mc:Ignorable="d"
-        Title="Warhouse Management Application" Height="431" Width="660"
+        Title="Warhouse Management Application" Height="483" Width="660"
         
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         
@@ -39,7 +39,11 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Height="auto">
-            <uc:ControlBarUC Tag="{Binding Title, ElementName=window}"></uc:ControlBarUC>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="257*"/>
+                <ColumnDefinition Width="73*"/>
+            </Grid.ColumnDefinitions>
+            <uc:ControlBarUC Tag="{Binding Title, ElementName=window}" Grid.ColumnSpan="2"></uc:ControlBarUC>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -477,12 +481,12 @@
                             <Separator></Separator>
                         </Grid>
                         <Grid Grid.Row="2">
-                            <ListView>
+                            <ListView ItemsSource="{Binding InventoriesList}">
                                 <ListView.View>
                                     <GridView>
-                                        <GridViewColumn Header="STT"></GridViewColumn>
-                                        <GridViewColumn Header="Tên mặt hàng"></GridViewColumn>
-                                        <GridViewColumn Header="Số lượng"></GridViewColumn>
+                                        <GridViewColumn Header="STT" DisplayMemberBinding="{Binding STT}"></GridViewColumn>
+                                        <GridViewColumn Header="Tên mặt hàng" DisplayMemberBinding="{Binding Object.DisplayName}"></GridViewColumn>
+                                        <GridViewColumn Header="Số lượng" DisplayMemberBinding="{Binding Count}"></GridViewColumn>
                                     </GridView>
                                 </ListView.View>
                             </ListView>
